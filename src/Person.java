@@ -29,10 +29,10 @@ public class Person {
     public String getGender() {
         String[] parts = FIO.split(" ");
         String second_name = parts[2];
-        if (second_name.endsWith("вич")) {
+        if ((second_name.endsWith("вич")) || (second_name.endsWith("ич"))) {
             return "М";
         }
-        else if (second_name.endsWith("вна")) {
+        else if ((second_name.endsWith("вна")) || (second_name.endsWith("чна"))) {
             return "Ж";
         }
         else {
